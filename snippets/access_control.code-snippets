@@ -1,8 +1,6 @@
 {
   "AccessControl": {
-    "prefix": [
-      "acl",
-    ],
+    "prefix": "acl",
     "body": [
       "<?xml version=\"1.0\" encoding=\"utf-8\"?>",
       "<AccessControl name=\"${1:$TM_FILENAME_BASE}\" async=\"false\" continueOnError=\"${2|true,false|}\" enabled=\"${3|true,false|}\">",
