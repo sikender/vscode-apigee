@@ -19,6 +19,10 @@
       {
         "language": "xml",
         "path": "./snippets/access_control.code-snippets"
+      },
+      {
+        "language": "xml",
+        "path": "./snippets/access_entity.code-snippets"
       }
     ]
   }
