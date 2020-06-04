@@ -18,7 +18,7 @@
   },
   "AccessControl-MatchRule": {
     "prefix": [
-      "acl:mr",
+      "acl:matchrule",
     ],
     "body": [
       "<MatchRule action=\"${6|ALLOW,DENY|}\">",

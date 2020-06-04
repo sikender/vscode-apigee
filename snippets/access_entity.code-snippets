@@ -20,7 +20,7 @@
   },
   "AccessEntity-Identifier": {
     "prefix": [
-      "ae:id",
+      "ae:identifier",
     ],
     "body": [
       "<Identifier>",
