@@ -1,5 +1,5 @@
 {
-  "Apigee - Access Control": {
+  "AccessControl": {
     "prefix": [
       "acl",
     ],
@@ -16,9 +16,9 @@
       "\t<IgnoreTrueClientIPHeader>${2|true,false|}</IgnoreTrueClientIPHeader>",
       "</AccessControl>${0}",
     ],
-    "description": "Apigee - Access Control"
+    "description": "Access Control"
   },
-  "Access Control - MatchRule": {
+  "AccessControl-MatchRule": {
     "prefix": [
       "acl:mr",
     ],
