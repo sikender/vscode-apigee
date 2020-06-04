@@ -1,10 +1,15 @@
 {
   "name": "vscode-apigee",
   "displayName": "vscode-apigee",
-  "description": "",
+  "publisher": "sikender",
+  "description": "Apigee extension for Visual Studio Code",
   "version": "0.0.1",
+  "icon": "images/icon.png",
   "engines": {
     "vscode": "^1.45.0"
+  },
+  "repository": {
+    "url": "https://github.com/sikender/vscode-apigee"
   },
   "categories": [
     "Snippets"
