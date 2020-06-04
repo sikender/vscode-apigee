@@ -1,4 +1,4 @@
-# vscode-apigee README
+# Apigee extension for Visual Studio Code
 
 This is the README for your extension "vscode-apigee". After writing up a brief description, we recommend including the following sections.
 

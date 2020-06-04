@@ -1,20 +1,20 @@
 {
-    "name": "vscode-apigee",
-    "displayName": "vscode-apigee",
-    "description": "",
-    "version": "0.0.1",
-    "engines": {
-        "vscode": "^1.45.0"
-    },
-    "categories": [
-        "Snippets"
-    ],
-    "contributes": {
-        "snippets": [
-            {
-                "language": "'xml', 'js'",
-                "path": "./snippets/snippets.code-snippets"
-            }
-        ]
-    }
+  "name": "vscode-apigee",
+  "displayName": "vscode-apigee",
+  "description": "",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.45.0"
+  },
+  "categories": [
+    "Snippets"
+  ],
+  "contributes": {
+    "snippets": [
+      {
+        "language": "xml",
+        "path": "./snippets/access_control.code-snippets"
+      }
+    ]
+  }
 }

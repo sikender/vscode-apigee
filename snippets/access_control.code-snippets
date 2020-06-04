@@ -1,0 +1,32 @@
+{
+  "Apigee - Access Control": {
+    "prefix": [
+      "acl",
+    ],
+    "body": [
+      "<?xml version=\"1.0\" encoding=\"utf-8\"?>",
+      "<AccessControl name=\"${1:$TM_FILENAME_BASE}\" async=\"false\" continueOnError=\"${2|true,false|}\" enabled=\"${3|true,false|}\">",
+      "\t<DisplayName>${4:$TM_FILENAME_BASE}</DisplayName>",
+      "\t<IPRules noRuleMatchAction=\"${5|ALLOW,DENY|}\">",
+      "\t\t<MatchRule action=\"${6|ALLOW,DENY|}\">",
+      "\t\t\t<SourceAddress mask=\"${7:32}\">${8:127.0.0.1}</SourceAddress>",
+      "\t\t</MatchRule>",
+      "\t</IPRules>",
+      "\t<ValidateBasedOn>${9|X_FORWARDED_FOR_ALL_IP,X_FORWARDED_FOR_FIRST_IP,X_FORWARDED_FOR_LAST_IP|}</ValidateBasedOn>",
+      "\t<IgnoreTrueClientIPHeader>${2|true,false|}</IgnoreTrueClientIPHeader>",
+      "</AccessControl>${0}",
+    ],
+    "description": "Apigee - Access Control"
+  },
+  "Access Control - MatchRule": {
+    "prefix": [
+      "acl:mr",
+    ],
+    "body": [
+      "<MatchRule action=\"${6|ALLOW,DENY|}\">",
+      "\t<SourceAddress mask=\"${7:32}\">${8:127.0.0.1}</SourceAddress>",
+      "</MatchRule>${0}"
+    ],
+    "description": "Access Control - MatchRule"
+  }
+}
