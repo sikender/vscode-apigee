@@ -1,0 +1,140 @@
+{
+  "AssignMessage": {
+    "prefix": "am",
+    "body": [
+      "<AssignMessage name=\"${1:$TM_FILENAME_BASE}\" async=\"false\" continueOnError=\"${2|true,false|}\" enabled=\"${3|true,false|}\">",
+      "\t<DisplayName>${4:$TM_FILENAME_BASE}</DisplayName>",
+      "\t${0}",
+      "\t<IgnoreUnresolvedVariables>${5|true,false|}</IgnoreUnresolvedVariables>",
+      "\t<AssignTo createNew=\"${6|true,false|}\" transport=\"http\" type=\"${7|request,response|}\"/>",
+      "</AssignMessage>"
+    ],
+    "description": "Assign Message"
+  },
+  "AssignMessage-Add": {
+    "prefix": "am:add",
+    "body": [
+      "<Add>",
+      "\t${0}",
+      "</Add>"
+    ],
+    "description": "Assign Message - Add"
+  },
+  "AssignMessage-Copy": {
+    "prefix": "am:copy",
+    "body": [
+      "<Copy source=\"${1|request,response|}\">",
+      "\t${0}",
+      "</Copy>"
+    ],
+    "description": "Assign Message - Copy"
+  },
+  "AssignMessage-Remove": {
+    "prefix": "am:remove",
+    "body": [
+      "<Remove>",
+      "\t${0}",
+      "</Remove>"
+    ],
+    "description": "Assign Message - Remove"
+  },
+  "AssignMessage-Set": {
+    "prefix": "am:set",
+    "body": [
+      "<Set>",
+      "\t${0}",
+      "</Set>"
+    ],
+    "description": "Assign Message - Set"
+  },
+  "AssignMessage-AssignVariable": {
+    "prefix": "am:assignvariable",
+    "body": [
+      "<AssignVariable>",
+      "\t<Name>${1:variable_name}</Name>",
+      "\t<Value>${2:variable_value}</Value>",
+      "\t<Ref>${3:source_variable}</Ref>",
+      "\t<Template>${4:message_template}</Template>",
+      "</AssignVariable>${0}"
+    ],
+    "description": "Assign Message - Assign Variable"
+  },
+  "AssignMessage-FormParams": {
+    "prefix": "am:formparams",
+    "body": [
+      "<FormParams>",
+      "\t<FormParam name=\"${1:formparam_name}\">${2:formparam_value}</FormParam>",
+      "</FormParams>${0}"
+    ],
+    "description": "Assign Message - Form Params"
+  },
+  "AssignMessage-FormParam": {
+    "prefix": "am:formparam",
+    "body": [
+      "<FormParam name=\"${1:formparam_name}\">${2:formparam_value}</FormParam>${0}",
+    ],
+    "description": "Assign Message - Form Param"
+  },
+  "AssignMessage-Headers": {
+    "prefix": "am:headers",
+    "body": [
+      "<Headers>",
+      "\t<Header name=\"${1:header_name}\">${2:header_value}</Header>",
+      "</Headers>${0}"
+    ],
+    "description": "Assign Message - Headers"
+  },
+  "AssignMessage-Header": {
+    "prefix": "am:header",
+    "body": [
+      "<Header name=\"${1:header_name}\">${2:header_value}</Header>${0}"
+    ],
+    "description": "Assign Message - Header"
+  },
+  "AssignMessage-QueryParams": {
+    "prefix": "am:queryparams",
+    "body": [
+      "<QueryParams>",
+      "\t<QueryParam name=\"${1:queryparam_name}\">${2:queryparam_value}</QueryParam>",
+      "</QueryParams>${0}"
+    ],
+    "description": "Assign Message - Query Params"
+  },
+  "AssignMessage-QueryParam": {
+    "prefix": "am:queryparam",
+    "body": [
+      "<QueryParam name=\"${1:queryparam_name}\">${2:queryparam_value}</QueryParam>${0}"
+    ],
+    "description": "Assign Message - Query Param"
+  },
+  "AssignMessage-Payload": {
+    "prefix": "am:payload",
+    "body": [
+      "<Payload contentType=\"${1:application/json}\">",
+      "\t{${2}}",
+      "</Payload>${0}"
+    ],
+    "description": "Assign Message - Payload"
+  },
+  "AssignMessage-ReasonPhrase": {
+    "prefix": "am:reasonphrase",
+    "body": [
+      "<ReasonPhrase>${1:variable}</ReasonPhrase>${0}"
+    ],
+    "description": "Assign Message - Reason Phrase"
+  },
+  "AssignMessage-StatusCode": {
+    "prefix": "am:statuscode",
+    "body": [
+      "<StatusCode>${1:200}</StatusCode>${0}"
+    ],
+    "description": "Assign Message - Status Code"
+  },
+  "AssignMessage-Verb": {
+    "prefix": "am:verb",
+    "body": [
+      "<Verb>${1|GET,POST,PUT,PATCH,DELETE|}</Verb>${0}"
+    ],
+    "description": "Assign Message - Verb"
+  }
+}

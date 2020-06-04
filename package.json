@@ -23,6 +23,10 @@
       {
         "language": "xml",
         "path": "./snippets/access_entity.code-snippets"
+      },
+      {
+        "language": "xml",
+        "path": "./snippets/assign_message.code-snippets"
       }
     ]
   }
