@@ -1,0 +1,15 @@
+{
+  "ExtensionCallout": {
+    "prefix": "ec",
+    "body": [
+      "<?xml version=\"1.0\" encoding=\"utf-8\"?>",
+      "<ConnectorCallout name=\"${1:$TM_FILENAME_BASE}\" async=\"false\" continueOnError=\"${2|true,false|}\" enabled=\"${3|true,false|}\">",
+      "\t<Connector>${4:name-of-configured-extension}</Connector>",
+      "\t<Action>${5:action-exposed-by-extension}</Action>",
+      "\t<Input>${6:<![CDATA[ JSON-containing-input-values ]]>}</Input>",
+      "\t<Output parsed=\"${7|true,false|}\">${8:variable}</Output>",
+      "<ConnectorCallout>${0}"
+    ],
+    "description": "Extension Callout"
+  }
+}
