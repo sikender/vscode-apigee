@@ -1,0 +1,75 @@
+{
+  "ExtractVariables": {
+    "prefix": "ev",
+    "body": [
+      "<?xml version=\"1.0\" encoding=\"utf-8\"?>",
+      "<ExtractVariables name=\"${1:$TM_FILENAME_BASE}\" async=\"false\" continueOnError=\"${2|true,false|}\" enabled=\"${3|true,false|}\">",
+      "\t<Source clearPayload=\"${4|true,false|}\">${5:request}</Source>",
+      "\t<VariablePrefix>${6:apigee}</VariablePrefix>",
+      "\t<IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables>",
+      "</ExtractVariables>${0}"
+    ],
+    "description": "Extract Variables"
+  },
+  "ExtractVariables-URIPath": {
+    "prefix": "ev:uripath",
+    "body": [
+      "<URIPath>",
+      "\t<Pattern ignoreCase=\"${1|true,false|}\">${2:/accounts/{id}}</Pattern>",
+      "</URIPath>"
+    ],
+    "description": "Extract Variables - URIPath"
+  },
+  "ExtractVariables-QueryParam": {
+    "prefix": "ev:queryparam",
+    "body": [
+      "<QueryParam name=\"${1:code}\">",
+      "\t<Pattern ignoreCase=\"${2|true,false|}\">${3:DBN{dbncode}}</Pattern>",
+      "</QueryParam>"
+    ],
+    "description": "Extract Variables - QueryParam"
+  },
+  "ExtractVariables-FormParam": {
+    "prefix": "ev:formparam",
+    "body": [
+      "<FormParam name=\"${1:user}\">",
+      "\t<Pattern>${2:{user}}</Pattern>",
+      "</FormParam>"
+    ],
+    "description": "Extract Variables - FormParam"
+  },
+  "ExtractVariables-Variable": {
+    "prefix": "ev:variable",
+    "body": [
+      "<Variable name=\"${1:request.content}\">",
+      "\t<Pattern>${2:{user}}</Pattern>",
+      "</Variable>"
+    ],
+    "description": "Extract Variables - Variable"
+  },
+  "ExtractVariables-JSONPayload": {
+    "prefix": "ev:jsonpayload",
+    "body": [
+      "<JSONPayload>",
+      "\t<Variable name=\"${1:latitude}\" type=\"${2|string,boolean,integer,long,float,double,nodeset|}\">",
+      "\t\t<JSONPath>${3:$.results[0].geometry.location.lat}</JSONPath>",
+      "\t</Variable>",
+      "</JSONPayload>"
+    ],
+    "description": "Extract Variables - JSONPayload"
+  },
+  "ExtractVariables-XMLPayload": {
+    "prefix": "ev:xmlpayload",
+    "body": [
+      "<XMLPayload stopPayloadProcessing=\"${1|true,false|}\">",
+      "\t<Namespaces>",
+      "\t\t<Namespace prefix=\"${2:dir}\">${3:urn: 43BFF88D-D204-4427-B6BA-140AF393142F}</Namespace>",
+      "\t</Namespaces>",
+      "\t<Variable name=\"${4:travelmode}\" type=\"${5|string,boolean,integer,long,float,double,nodeset|}\">",
+      "\t\t<XPath>${6:/dir:Directions/dir:route/dir:leg/dir:step/@mode}</XPath>",
+      "\t</Variable>",
+      "</XMLPayload>"
+    ],
+    "description": "Extract Variables - XMLPayload"
+  }
+}

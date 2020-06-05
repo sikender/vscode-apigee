@@ -43,6 +43,10 @@
       {
         "language": "xml",
         "path": "./snippets/extension_callout.code-snippets"
+      },
+      {
+        "language": "xml",
+        "path": "./snippets/extract_variables.code-snippets"
       }
     ]
   }
