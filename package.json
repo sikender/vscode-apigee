@@ -35,6 +35,10 @@
       {
         "language": "xml",
         "path": "./snippets/cache.code-snippets"
+      },
+      {
+        "language": "xml",
+        "path": "./snippets/concurrent_ratelimit.code-snippets"
       }
     ]
   }
