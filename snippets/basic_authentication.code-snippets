@@ -5,12 +5,12 @@
       "<?xml version=\"1.0\" encoding=\"utf-8\"?>",
       "<BasicAuthentication name=\"${1:$TM_FILENAME_BASE}\" async=\"false\" continueOnError=\"${2|true,false|}\" enabled=\"${3|true,false|}\">",
       "\t<DisplayName>${4:$TM_FILENAME_BASE}</DisplayName>",
-      "\t<Operation value=\"Encode\"></Operation>",
+      "\t<Operation>Encode</Operation>",
       "\t<IgnoreUnresolvedVariables>${5|true,false|}</IgnoreUnresolvedVariables>",
       "\t<User ref=\"${6:username}\" />",
       "\t<Password ref=\"${7:password}\" />",
       "\t<AssignTo createNew=\"${8|true,false|}\">${9:request.header.Authorization}</AssignTo>",
-      "<BasicAuthentication>${0}"
+      "</BasicAuthentication>${0}"
     ],
     "description": "Basic Auth - Encode"
   },
@@ -20,12 +20,12 @@
       "<?xml version=\"1.0\" encoding=\"utf-8\"?>",
       "<BasicAuthentication name=\"${1:$TM_FILENAME_BASE}\" async=\"false\" continueOnError=\"${2|true,false|}\" enabled=\"${3|true,false|}\">",
       "\t<DisplayName>${4:$TM_FILENAME_BASE}</DisplayName>",
-      "\t<Operation value=\"Decode\"></Operation>",
+      "\t<Operation>Decode</Operation>",
       "\t<IgnoreUnresolvedVariables>${5|true,false|}</IgnoreUnresolvedVariables>",
       "\t<User ref=\"${6:username}\" />",
       "\t<Password ref=\"${7:password}\" />",
       "\t<Source>${8:request.header.Authorization}</Source>",
-      "<BasicAuthentication>${0}"
+      "</BasicAuthentication>${0}"
     ],
     "description": "Basic Auth - Decode"
   }
