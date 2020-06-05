@@ -31,6 +31,10 @@
       {
         "language": "xml",
         "path": "./snippets/basic_authentication.code-snippets"
+      },
+      {
+        "language": "xml",
+        "path": "./snippets/cache.code-snippets"
       }
     ]
   }

@@ -1,0 +1,123 @@
+{
+  "Cache-Populate": {
+    "prefix": "ca:populatecache",
+    "body": [
+      "<?xml version=\"1.0\" encoding=\"utf-8\"?>",
+      "<PopulateCache name=\"${1:$TM_FILENAME_BASE}\" async=\"false\" continueOnError=\"${2|true,false|}\" enabled=\"${3|true,false|}\">",
+      "\t<DisplayName>${4:$TM_FILENAME_BASE}</DisplayName>",
+      "\t<CacheKey>",
+      "\t\t<Prefix>${5:UserToken}</Prefix>",
+      "\t\t<KeyFragment>${6:apiAccessToken}</KeyFragment>",
+      "\t\t<KeyFragment ref=\"${7:request.queryparam.client_id}\" />",
+      "\t</CacheKey>",
+      "\t<CacheResource>${8:cache_to_use}</CacheResource>",
+      "\t<Scope>${9|Global,Application,Proxy,Target,Exclusive|}</Scope>",
+      "\t<ExpirySettings>",
+      "\t\t<TimeoutInSeconds>${10:300}</TimeoutInSeconds>",
+      "\t\t<TimeOfDay ref=\"${11:time_variable}\">${12:$CURRENT_HOUR:$CURRENT_MINUTE:$CURRENT_SECOND}</TimeOfDay>",
+      "\t\t<ExpiryDate ref=\"${13:date_variable}\">${14:$CURRENT_MONTH-$CURRENT_DATE-$CURRENT_YEAR}</ExpiryDate>",
+      "\t</ExpirySettings>",
+      "\t<Source>${15:source_variable}</Source>",
+      "</PopulateCache>${0}"
+    ],
+    "description": "Cache - Populate"
+  },
+  "Cache-Lookup": {
+    "prefix": "ca:lookupcache",
+    "body": [
+      "<?xml version=\"1.0\" encoding=\"utf-8\"?>",
+      "<LookupCache name=\"${1:$TM_FILENAME_BASE}\" async=\"false\" continueOnError=\"${2|true,false|}\" enabled=\"${3|true,false|}\">",
+      "\t<DisplayName>${4:$TM_FILENAME_BASE}</DisplayName>",
+      "\t<CacheKey>",
+      "\t\t<Prefix>${5:UserToken}</Prefix>",
+      "\t\t<KeyFragment>${6:apiAccessToken}</KeyFragment>",
+      "\t\t<KeyFragment ref=\"${7:request.queryparam.client_id}\" />",
+      "\t</CacheKey>",
+      "\t<CacheResource>${8:cache_to_use}</CacheResource>",
+      "\t<Scope>${9|Global,Application,Proxy,Target,Exclusive|}</Scope>",
+      "\t<CacheLookupTimeoutInSeconds>${10:30}</CacheLookupTimeoutInSeconds>",
+      "\t<AssignTo>${11:variable}</AssignTo>",
+      "</LookupCache>${0}"
+    ],
+    "description": "Cache - Lookup"
+  },
+  "Cache-Invalidate": {
+    "prefix": "ca:invalidatecache",
+    "body": [
+      "<?xml version=\"1.0\" encoding=\"utf-8\"?>",
+      "<InvalidateCache name=\"${1:$TM_FILENAME_BASE}\" async=\"false\" continueOnError=\"${2|true,false|}\" enabled=\"${3|true,false|}\">",
+      "\t<DisplayName>${4:$TM_FILENAME_BASE}</DisplayName>",
+      "\t<CacheKey>",
+      "\t\t<Prefix>${5:UserToken}</Prefix>",
+      "\t\t<KeyFragment>${6:apiAccessToken}</KeyFragment>",
+      "\t\t<KeyFragment ref=\"${7:request.queryparam.client_id}\" />",
+      "\t</CacheKey>",
+      "\t<CacheResource>${8:cache_to_use}</CacheResource>",
+      "\t<Scope>${9|Global,Application,Proxy,Target,Exclusive|}</Scope>",
+      "\t<PurgeChildEntries>${11|true,false|}</PurgeChildEntries>",
+      "</InvalidateCache>${0}"
+    ],
+    "description": "Cache - Invalidate"
+  },
+  "Cache-Response": {
+    "prefix": "ca:responsecache",
+    "body": [
+      "<?xml version=\"1.0\" encoding=\"utf-8\"?>",
+      "<ResponseCache name=\"${1:$TM_FILENAME_BASE}\" async=\"false\" continueOnError=\"${2|true,false|}\" enabled=\"${3|true,false|}\">",
+      "\t<DisplayName>${4:$TM_FILENAME_BASE}</DisplayName>",
+      "\t<CacheKey>",
+      "\t\t<Prefix>${5:UserToken}</Prefix>",
+      "\t\t<KeyFragment>${6:apiAccessToken}</KeyFragment>",
+      "\t\t<KeyFragment ref=\"${7:request.queryparam.client_id}\" />",
+      "\t</CacheKey>",
+      "\t<CacheResource>${8:cache_to_use}</CacheResource>",
+      "\t<Scope>${9|Global,Application,Proxy,Target,Exclusive|}</Scope>",
+      "\t<ExpirySettings>",
+      "\t\t<TimeoutInSeconds>${10:300}</TimeoutInSeconds>",
+      "\t\t<TimeOfDay ref=\"${11:time_variable}\">${12:$CURRENT_HOUR:$CURRENT_MINUTE:$CURRENT_SECOND}</TimeOfDay>",
+      "\t\t<ExpiryDate ref=\"${13:date_variable}\">${14:$CURRENT_MONTH-$CURRENT_DATE-$CURRENT_YEAR}</ExpiryDate>",
+      "\t</ExpirySettings>",
+      "\t<CacheLookupTimeoutInSeconds>${15:30}</CacheLookupTimeoutInSeconds>",
+      "\t<ExcludeErrorResponse>${16|true,false|}</ExcludeErrorResponse>",
+      "\t<SkipCacheLookup>${17:variable_condition_expression}</SkipCacheLookup>",
+      "\t<SkipCachePopulation>${18:variable_condition_expression}</SkipCachePopulation>",
+      "\t<UseAcceptHeader>${19|true,false|}</UseAcceptHeader>",
+      "\t<UseResponseCacheHeaders>${20|true,false|}</UseResponseCacheHeaders>",
+      "</ResponseCache>${0}"
+    ],
+    "description": "Cache - Response"
+  },
+  "Cache-Context": {
+    "prefix": "ca:cachecontext",
+    "body": [
+      "<CacheContext>",
+      "\t<APIProxyName>${1:application_that_added_the_entry}</APIProxyName>",
+      "\t<ProxyName>${2:proxy_for_which_data_was_cached}</ProxyName>",
+      "\t<TargetName>${3:endpoint_for_which_data_was_cached}</TargetName>",
+      "</CacheContext>${0}"
+    ],
+    "description": "Cache - Context"
+  },
+  "Cache-Key": {
+    "prefix": "ca:cachekey",
+    "body": [
+      "<CacheKey>",
+      "\t<Prefix>${1:UserToken}</Prefix>",
+      "\t<KeyFragment>${2:apiAccessToken}</KeyFragment>",
+      "\t<KeyFragment ref=\"${3:request.queryparam.client_id}\" />",
+      "</CacheKey>"
+    ],
+    "description": "Cache - Key"
+  },
+  "Cache-ExpirySettings": {
+    "prefix": "ca:expirysettings",
+    "body": [
+      "<ExpirySettings>",
+      "\t<TimeoutInSeconds>${1:300}</TimeoutInSeconds>",
+      "\t<TimeOfDay ref=\"${2:time_variable}\">${3:$CURRENT_HOUR:$CURRENT_MINUTE:$CURRENT_SECOND}</TimeOfDay>",
+      "\t<ExpiryDate ref=\"${4:date_variable}\">${5:$CURRENT_MONTH-$CURRENT_DATE-$CURRENT_YEAR}</ExpiryDate>",
+      "</ExpirySettings>"
+    ],
+    "description": "Cache - Expiry Settings"
+  }
+}
