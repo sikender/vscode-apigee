@@ -47,6 +47,10 @@
       {
         "language": "xml",
         "path": "./snippets/extract_variables.code-snippets"
+      },
+      {
+        "language": "xml",
+        "path": "./snippets/flow_callout.code-snippets"
       }
     ]
   }
