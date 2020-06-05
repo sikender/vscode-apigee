@@ -27,6 +27,10 @@
       {
         "language": "xml",
         "path": "./snippets/assign_message.code-snippets"
+      },
+      {
+        "language": "xml",
+        "path": "./snippets/basic_authentication.code-snippets"
       }
     ]
   }
