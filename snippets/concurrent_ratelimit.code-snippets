@@ -4,10 +4,11 @@
     "body": [
       "<?xml version=\"1.0\" encoding=\"utf-8\"?>",
       "<AccessEntity name=\"${1:$TM_FILENAME_BASE}\" async=\"false\" continueOnError=\"${2|true,false|}\" enabled=\"${3|true,false|}\">",
-      "\tAllowConnections count=\"${4:200}\" ttl=\"${5:5}\"/>",
-      "\t<Distributed>${6|true,false|}</Distributed>",
-      "\t<StrictOnTtl>${7|true,false|}</StrictOnTtl>",
-      "\t<TargetIdentifier name=\"${8:default}\"></TargetIdentifier>",
+      "\t<DisplayName>${4:$TM_FILENAME_BASE}</DisplayName>",
+      "\tAllowConnections count=\"${5:200}\" ttl=\"${6:5}\"/>",
+      "\t<Distributed>${7|true,false|}</Distributed>",
+      "\t<StrictOnTtl>${8|true,false|}</StrictOnTtl>",
+      "\t<TargetIdentifier name=\"${9:default}\"></TargetIdentifier>",
       "<AccessEntity>${0}"
     ],
     "description": "Concurrent Ratelimit"

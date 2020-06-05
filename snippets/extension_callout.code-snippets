@@ -4,10 +4,11 @@
     "body": [
       "<?xml version=\"1.0\" encoding=\"utf-8\"?>",
       "<ConnectorCallout name=\"${1:$TM_FILENAME_BASE}\" async=\"false\" continueOnError=\"${2|true,false|}\" enabled=\"${3|true,false|}\">",
-      "\t<Connector>${4:name-of-configured-extension}</Connector>",
-      "\t<Action>${5:action-exposed-by-extension}</Action>",
-      "\t<Input>${6:<![CDATA[ JSON-containing-input-values ]]>}</Input>",
-      "\t<Output parsed=\"${7|true,false|}\">${8:variable}</Output>",
+      "\t<DisplayName>${4:$TM_FILENAME_BASE}</DisplayName>",
+      "\t<Connector>${5:name-of-configured-extension}</Connector>",
+      "\t<Action>${6:action-exposed-by-extension}</Action>",
+      "\t<Input>${7:<![CDATA[ JSON-containing-input-values ]]>}</Input>",
+      "\t<Output parsed=\"${8|true,false|}\">${9:variable}</Output>",
       "<ConnectorCallout>${0}"
     ],
     "description": "Extension Callout"
