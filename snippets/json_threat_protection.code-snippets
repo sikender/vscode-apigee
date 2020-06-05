@@ -1,0 +1,18 @@
+{
+  "JSONThreatProtection": {
+    "prefix": "jtp",
+    "body": [
+      "<?xml version=\"1.0\" encoding=\"utf-8\"?>",
+      "<JSONThreatProtection name=\"${1:$TM_FILENAME_BASE}\" async=\"false\" continueOnError=\"${2|true,false|}\" enabled=\"${3|true,false|}\">",
+      "\t<DisplayName>${4:$TM_FILENAME_BASE}</DisplayName>",
+      "\t<ArrayElementCount>${5:20}</ArrayElementCount>",
+      "\t<ContainerDepth>${6:10}</ContainerDepth>",
+      "\t<ObjectEntryCount>${7:15}</ObjectEntryCount>",
+      "\t<ObjectEntryNameLength>${8:50}</ObjectEntryNameLength>",
+      "\t<StringValueLength>${9:500}</StringValueLength>",
+      "\t<Source>${10|request,response,message|}</Source>",
+      "</JSONThreatProtection>${0}"
+    ],
+    "description": "JSON Threat Protection"
+  }
+}

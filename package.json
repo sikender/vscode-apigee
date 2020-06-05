@@ -51,6 +51,10 @@
       {
         "language": "xml",
         "path": "./snippets/flow_callout.code-snippets"
+      },
+      {
+        "language": "xml",
+        "path": "./snippets/json_threat_protection.code-snippets"
       }
     ]
   }
