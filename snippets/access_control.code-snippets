@@ -17,9 +17,7 @@
     "description": "Access Control"
   },
   "AccessControl-MatchRule": {
-    "prefix": [
-      "acl:matchrule",
-    ],
+    "prefix": "acl:matchrule",
     "body": [
       "<MatchRule action=\"${6|ALLOW,DENY|}\">",
       "\t<SourceAddress mask=\"${7:32}\">${8:127.0.0.1}</SourceAddress>",

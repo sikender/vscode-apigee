@@ -1,6 +1,6 @@
 {
   "BasicAuth-Encode": {
-    "prefix": "ba-encode",
+    "prefix": "ba:encode",
     "body": [
       "<?xml version=\"1.0\" encoding=\"utf-8\"?>",
       "<BasicAuthentication name=\"${1:$TM_FILENAME_BASE}\" async=\"false\" continueOnError=\"${2|true,false|}\" enabled=\"${3|true,false|}\">",
@@ -15,7 +15,7 @@
     "description": "Basic Auth - Encode"
   },
   "BasicAuth-Decode": {
-    "prefix": "ba-decode",
+    "prefix": "ba:decode",
     "body": [
       "<?xml version=\"1.0\" encoding=\"utf-8\"?>",
       "<BasicAuthentication name=\"${1:$TM_FILENAME_BASE}\" async=\"false\" continueOnError=\"${2|true,false|}\" enabled=\"${3|true,false|}\">",

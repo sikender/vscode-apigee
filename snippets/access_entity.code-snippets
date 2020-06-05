@@ -19,9 +19,7 @@
     "description": "Access Entity"
   },
   "AccessEntity-Identifier": {
-    "prefix": [
-      "ae:identifier",
-    ],
+    "prefix": "ae:identifier",
     "body": [
       "<Identifier>",
       "\t<EntityIdentifier ref=\"${1:request.queryparam.apikey}\" type=\"${2|apiproductname,appid,appname,authorizationcode,company,companyname,consumerkey,developeremail,developerid,requesttoken,verifier|}\" />",
