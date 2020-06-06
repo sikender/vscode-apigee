@@ -1,0 +1,29 @@
+{
+  "JSONToXML": {
+    "prefix": "j2x",
+    "body": [
+      "<?xml version=\"1.0\" encoding=\"utf-8\"?>",
+      "<JSONToXML name=\"${1:$TM_FILENAME_BASE}\" async=\"false\" continueOnError=\"${2|true,false|}\" enabled=\"${3|true,false|}\">",
+      "\t<DisplayName>${4:$TM_FILENAME_BASE}</DisplayName>",
+      "\t<Source>${5|request,response|}</Source>",
+      "\t<OutputVariable>${6|request,response|}</OutputVariable>",
+      "\t<Options>",
+      "\t\t<OmitXmlDeclaration>${7|true,false|}</OmitXmlDeclaration>",
+      "\t\t<NamespaceBlockName>${8:namespaces}</NamespaceBlockName>",
+      "\t\t<DefaultNamespaceNodeName>${9:default}</DefaultNamespaceNodeName>",
+      "\t\t<NamespaceSeparator>${10::}</NamespaceSeparator>",
+      "\t\t<ObjectRootElementName>${11:Root}</ObjectRootElementName>",
+      "\t\t<AttributeBlockName>${12:attrs}</AttributeBlockName>",
+      "\t\t<AttributePrefix>${13:@}</AttributePrefix>",
+      "\t\t<ArrayRootElementName>${14:Array}</ArrayRootElementName>",
+      "\t\t<ArrayItemElementName>${15:Item}</ArrayItemElementName>",
+      "\t\t<Indent>${16|true,false|}</Indent>",
+      "\t\t<TextNodeName>${17:text}</TextNodeName>",
+      "\t\t<NullValue>${18:NULL}</NullValue>",
+      "\t\t<InvalidCharsReplacement>${19:_}</InvalidCharsReplacement>",
+      "\t</Options>",
+      "</JSONThreatProtection>${0}"
+    ],
+    "description": "JSONToXML"
+  }
+}

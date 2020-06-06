@@ -55,6 +55,10 @@
       {
         "language": "xml",
         "path": "./snippets/json_threat_protection.code-snippets"
+      },
+      {
+        "language": "xml",
+        "path": "./snippets/json_to_xml.code-snippets"
       }
     ]
   }
