@@ -1,0 +1,63 @@
+{
+  "KVMOperations": {
+    "prefix": "kvm",
+    "body": [
+      "<?xml version=\"1.0\" encoding=\"utf-8\"?>",
+      "<JSONToXML name=\"${1:$TM_FILENAME_BASE}\" mapIdentifier=\"${2:kvm_name}\" async=\"false\" continueOnError=\"${3|true,false|}\" enabled=\"${4|true,false|}\">",
+      "\t<DisplayName>${5:$TM_FILENAME_BASE}</DisplayName>",
+      "\t<Scope>${6:environment}</Scope>",
+      "\t<ExpiryTimeInSecs>${7:300}</ExpiryTimeInSecs>",
+      "\t${0}",
+      "</JSONThreatProtection>"
+    ],
+    "description": "KVM Operations"
+  },
+  "KVMOperations-InitialEntries": {
+    "prefix": "kvm-initialentries",
+    "body": [
+      "<InitialEntries>",
+      "\t<Entry>",
+      "\t\t<Key>",
+      "\t\t\t<Parameter>${1:key_name_literal}</Parameter>",
+      "\t\t\t<Parameter ref=\"${2:variable_name}\" />",
+      "\t\t</Key>",
+      "\t<Value>${2:v1}</Value>",
+      "</Entry>${0}"
+    ],
+    "description": "KVM Operations - InitialEntries"
+  },
+  "KVMOperations-Put": {
+    "prefix": "kvm-put",
+    "body": [
+      "<Put override=\"{1|true,false|}\">",
+      "\t<Key>",
+      "\t\t<Parameter ref=\"${2:key_variable}\"/>",
+      "\t</Key>",
+      "\t<Value>${3:v1}</Value>",
+      "</Put>${0}"
+    ],
+    "description": "KVM Operations - Put"
+  },
+  "KVMOperations-Get": {
+    "prefix": "kvm-get",
+    "body": [
+      "<Get assignTo=\"${1:myvar}\" index=\"${2:1}\">",
+      "\t<Key>",
+      "\t\t<Parameter>${3:key_variable}</Parameter>",
+      "\t</Key>",
+      "</Get>${0}"
+    ],
+    "description": "KVM Operations - Get"
+  },
+  "KVMOperations-Delete": {
+    "prefix": "kvm-delete",
+    "body": [
+      "<Delete>",
+      "\t<Key>",
+      "\t\t<Parameter>${1:key_variable}</Parameter>",
+      "\t</Key>",
+      "</Delete>${0}"
+    ],
+    "description": "KVM Operations - Delete"
+  }
+}

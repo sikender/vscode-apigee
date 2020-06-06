@@ -59,6 +59,10 @@
       {
         "language": "xml",
         "path": "./snippets/json_to_xml.code-snippets"
+      },
+      {
+        "language": "xml",
+        "path": "./snippets/keyvaluemap-operations.code-snippets"
       }
     ]
   }
