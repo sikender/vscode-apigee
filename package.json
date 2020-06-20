@@ -67,6 +67,10 @@
       {
         "language": "xml",
         "path": "./snippets/get_oauthv2_Info.code-snippets"
+      },
+      {
+        "language": "xml",
+        "path": "./snippets/set_oauthv2_info.code-snippets"
       }
     ]
   }
