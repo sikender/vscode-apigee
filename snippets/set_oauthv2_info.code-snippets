@@ -1,0 +1,17 @@
+{
+  "SetOAuthV2Info": {
+    "prefix": "soi",
+    "body": [
+      "<?xml version=\"1.0\" encoding=\"utf-8\"?>",
+      "<SetOAuthV2Info name=\"${1:$TM_FILENAME_BASE}\" async=\"false\" continueOnError=\"${2|true,false|}\" enabled=\"${3|true,false|}\">",
+      "\t<DisplayName>${4:$TM_FILENAME_BASE}</DisplayName>",
+      "\t<AccessToken ref=\"${5:request.queryparam.access_token}\"></AccessToken>",
+      "\t<Attributes>",
+      "\t\t<Attribute name=\"${6:user.id}\" ref=\"${7:request.queryparam.user_id}\"></Attribute>",
+      "\t\t<Attribute name=\"${8:attr_name}\">${9:attr_value}</Attribute>",
+      "\t</Attributes>",
+      "</SetOAuthV2Info>${0}"
+    ],
+    "description": "SetOAuthV2Info"
+  }
+}
