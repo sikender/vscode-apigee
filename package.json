@@ -63,6 +63,10 @@
       {
         "language": "xml",
         "path": "./snippets/keyvaluemap-operations.code-snippets"
+      },
+      {
+        "language": "xml",
+        "path": "./snippets/get_oauthv2_Info.code-snippets"
       }
     ]
   }
