@@ -5,6 +5,7 @@
   "description": "Apigee extension for Visual Studio Code",
   "version": "0.0.1",
   "icon": "images/icon.png",
+  "private": true,
   "engines": {
     "vscode": "^1.45.0"
   },
