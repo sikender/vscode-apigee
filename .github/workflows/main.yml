@@ -1,7 +1,7 @@
 name: CI
 on:
   push:
-    branches: [ actions ]
+    branches: [actions]
 #   pull_request:
 #     branches: [ master ]
 
@@ -9,25 +9,24 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout
+        uses: actions/checkout@v2
 
-    - name: Checkout
-      uses: actions/checkout@v2
+      - name: Setup Node.js
+        uses: actions/setup-node@v1
+        with:
+          node-version: 12
 
-    - name: Setup Node.js
-      uses: actions/setup-node@v1
-      with:
-        node-version: 12
-    
-#     - name: Install dependencies
-    
-    - name: Release
-      env:
-        GITHUB_TOKEN: ${{ secrets.RELEASE_TOKEN }}
+      #     - name: Install dependencies
+
+      - name: Release
+        env:
+          GITHUB_TOKEN: ${{ secrets.RELEASE_TOKEN }}
         run: npx semantic-release
-    
-    - name: Vscode release plugin
-      uses: JCofman/vscodeaction@master
-      env:
-        PUBLISHER_TOKEN: ${{ secrets.VSCE_TOKEN }}
-      with:
-        args: publish -p $PUBLISHER_TOKEN 
+
+      - name: Vscode release plugin
+        uses: JCofman/vscodeaction@master
+        env:
+          PUBLISHER_TOKEN: ${{ secrets.VSCE_TOKEN }}
+        with:
+          args: publish -p $PUBLISHER_TOKEN
