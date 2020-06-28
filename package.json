@@ -1,7 +1,7 @@
 {
   "name": "vscode-apigee",
   "displayName": "vscode-apigee",
-  "publisher": "sikender",
+  "publisher": "sikendermkhan",
   "description": "Apigee extension for Visual Studio Code",
   "version": "0.0.1",
   "icon": "images/icon.png",
