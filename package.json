@@ -1,10 +1,11 @@
 {
   "name": "vscode-apigee",
   "displayName": "vscode-apigee",
-  "publisher": "sikender",
+  "publisher": "sikendermkhan",
   "description": "Apigee extension for Visual Studio Code",
   "version": "0.0.1",
   "icon": "images/icon.png",
+  "private": true,
   "engines": {
     "vscode": "^1.45.0"
   },
@@ -72,6 +73,24 @@
         "language": "xml",
         "path": "./snippets/set_oauthv2_info.code-snippets"
       }
+    ]
+  },
+  "devDependencies": {
+    "@semantic-release/github": "^7.0.7"
+  },
+  "release": {
+    "branches": "master",
+    "verifyConditions": [
+      "@semantic-release/github"
+    ],
+    "publish": [
+      "@semantic-release/github"
+    ],
+    "success": [
+      "@semantic-release/github"
+    ],
+    "fail": [
+      "@semantic-release/github"
     ]
   }
 }
