@@ -24,7 +24,7 @@
       "<Identifier>",
       "\t<EntityIdentifier ref=\"${1:request.queryparam.apikey}\" type=\"${2|apiproductname,appid,appname,authorizationcode,company,companyname,consumerkey,developeremail,developerid,requesttoken,verifier|}\" />",
       "\t<SecondaryIdentifier ref=\"${3:variable}\" type=\"${4|apiresource,companyname,consumerkey,developeremail,developerid|}\" />",
-      "</Identifier>${0}",
+      "</Identifier>${0}"
     ],
     "description": "Access Entity - Identifier"
   }

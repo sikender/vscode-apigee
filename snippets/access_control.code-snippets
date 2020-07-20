@@ -12,7 +12,7 @@
       "\t</IPRules>",
       "\t<ValidateBasedOn>${9|X_FORWARDED_FOR_ALL_IP,X_FORWARDED_FOR_FIRST_IP,X_FORWARDED_FOR_LAST_IP|}</ValidateBasedOn>",
       "\t<IgnoreTrueClientIPHeader>${2|true,false|}</IgnoreTrueClientIPHeader>",
-      "</AccessControl>${0}",
+      "</AccessControl>${0}"
     ],
     "description": "Access Control"
   },
