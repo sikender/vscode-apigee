@@ -74,7 +74,7 @@
   "AssignMessage-FormParam": {
     "prefix": "am:formparam",
     "body": [
-      "<FormParam name=\"${1:formparam_name}\">${2:formparam_value}</FormParam>${0}",
+      "<FormParam name=\"${1:formparam_name}\">${2:formparam_value}</FormParam>${0}"
     ],
     "description": "Assign Message - Form Param"
   },
