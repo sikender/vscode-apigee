@@ -1,0 +1,18 @@
+{
+  "ResetQuota": {
+    "prefix": "rq",
+    "body": [
+      "<?xml version=\"1.0\" encoding=\"utf-8\"?>",
+      "<ResetQuota name=\"${1:$TM_FILENAME_BASE}\" async=\"false\" continueOnError=\"${2|true,false|}\" enabled=\"${3|true,false|}\">",
+      "\t<DisplayName>${4:$TM_FILENAME_BASE}</DisplayName>",
+      "\t<Quota name=\"${5:quotaName}\" ref=\"${6:variable}\"/>",
+      "\t\t<Identifier name=\"${7:identifierName}\" ref=\"${8:variable}\"/>",
+      "\t\t\t<Class ref=\"${9:variable}\" />",
+      "\t\t\t<Allow>${10:100}</Allow>",
+      "\t\t</Identifier>",
+      "\t</Quota>",
+      "</ResetQuota>${0}"
+    ],
+    "description": "ResetQuota"
+  }
+}
