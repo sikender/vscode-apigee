@@ -1,0 +1,48 @@
+{
+  "Quota-Dynamic": {
+    "prefix": "quota-dynamic",
+    "body": [
+      "<?xml version=\"1.0\" encoding=\"utf-8\"?>",
+      "<Quota name=\"${1:$TM_FILENAME_BASE}\" type=\"${2|calendar,rollingwindow,flexi|}\" async=\"false\" continueOnError=\"${3|true,false|}\" enabled=\"${4|true,false|}\">",
+      "\t<DisplayName>${5:$TM_FILENAME_BASE}</DisplayName>",
+      "\t<Identifier ref=\"${6:variable}\"/>",
+      "\t<Interval ref=\"${7:variable}\">${8:1}</Interval>",
+      "\t<TimeUnit ref=\"${9:variable}\">${10|minute,hour,day,week,month|}</TimeUnit>",
+      "\t<Allow count=\"${11:2000}\" countRef=\"${12:variable}\"/>",
+      "\t<Distributed>${13|true,false|}</Distributed>",
+      "\t<Synchronous>${14|true,false|}</Synchronous>",
+      "</Quota>${0}"
+    ],
+    "description": "Quota - Dynamic"
+  },
+  "Quota-Calendar": {
+    "prefix": "quota-calendar",
+    "body": [
+      "<?xml version=\"1.0\" encoding=\"utf-8\"?>",
+      "<Quota name=\"${1:$TM_FILENAME_BASE}\" type=\"calendar\" async=\"false\" continueOnError=\"${2|true,false|}\" enabled=\"${3|true,false|}\">",
+      "\t<DisplayName>${5:$TM_FILENAME_BASE}</DisplayName>",
+      "\t<StartTime>${6:$CURRENT_YEAR}-${7:$CURRENT_MONTH}-${8:$CURRENT_DATE} ${9:$CURRENT_HOUR}:${10:$CURRENT_MINUTE}:${11:$CURRENT_SECOND}</StartTime>",
+      "\t<Interval ref=\"${12:variable}\">${13:1}</Interval>",
+      "\t<TimeUnit ref=\"${14:variable}\">${15|minute,hour,day,week,month|}</TimeUnit>",
+      "\t<Allow count=\"${16:2000}\" countRef=\"${17:variable}\"/>",
+      "</Quota>${0}"
+    ],
+    "description": "Quota - Calendar"
+  },
+  "Quota-Class": {
+    "prefix": "quota-class",
+    "body": [
+      "<?xml version=\"1.0\" encoding=\"utf-8\"?>",
+      "<Quota name=\"${1:$TM_FILENAME_BASE}\" type=\"${2|calendar,rollingwindow,flexi|}\" async=\"false\" continueOnError=\"${3|true,false|}\" enabled=\"${4|true,false|}\">",
+      "\t<DisplayName>${5:$TM_FILENAME_BASE}</DisplayName>",
+      "\t<Interval ref=\"${6:variable}\">${7:1}</Interval>",
+      "\t<TimeUnit ref=\"${8:variable}\">${9|minute,hour,day,week,month|}</TimeUnit>",
+      "\t<Allow>",
+      "\t\t<Class ref=\"${10:variable}\">",
+      "\t\t\t<Allow class=\"${11:platinum}\" count=\"${12:100}\"/>",
+      "\t</Allow>",
+      "</Quota>${0}"
+    ],
+    "description": "Quota - Class"
+  }
+}

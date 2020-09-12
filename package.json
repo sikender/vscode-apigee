@@ -68,6 +68,10 @@
       {
         "language": "xml",
         "path": "./snippets/delete_oauthv2_info.code-snippets"
+      },
+      {
+        "language": "xml",
+        "path": "./snippets/quota.code-snippets"
       }
     ]
   },
