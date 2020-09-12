@@ -25,6 +25,8 @@
       "\t<Interval ref=\"${12:variable}\">${13:1}</Interval>",
       "\t<TimeUnit ref=\"${14:variable}\">${15|minute,hour,day,week,month|}</TimeUnit>",
       "\t<Allow count=\"${16:2000}\" countRef=\"${17:variable}\"/>",
+      "\t<Distributed>${18|true,false|}</Distributed>",
+      "\t<Synchronous>${19|true,false|}</Synchronous>",
       "</Quota>${0}"
     ],
     "description": "Quota - Calendar"
@@ -41,6 +43,8 @@
       "\t\t<Class ref=\"${10:variable}\">",
       "\t\t\t<Allow class=\"${11:platinum}\" count=\"${12:100}\"/>",
       "\t</Allow>",
+      "\t<Distributed>${13|true,false|}</Distributed>",
+      "\t<Synchronous>${14|true,false|}</Synchronous>",
       "</Quota>${0}"
     ],
     "description": "Quota - Class"
