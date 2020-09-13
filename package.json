@@ -76,6 +76,10 @@
       {
         "language": "xml",
         "path": "./snippets/reset_quota.code-snippets"
+      },
+      {
+        "language": "xml",
+        "path": "./snippets/spike_arrest.code-snippets"
       }
     ]
   },
