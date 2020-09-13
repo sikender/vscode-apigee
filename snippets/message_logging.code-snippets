@@ -1,0 +1,23 @@
+{
+  "MessageLogging-Syslog": {
+    "prefix": "ml-Syslog",
+    "body": [
+      "<?xml version=\"1.0\" encoding=\"utf-8\"?>",
+      "<MessageLogging name=\"${1:$TM_FILENAME_BASE}\" enabled=\"${2|true,false|}\" continueOnError=\"${3|true,false|}\" async=\"false\">",
+      "\t<DisplayName>${4:$TM_FILENAME_BASE}</DisplayName>",
+      "\t<Syslog>",
+      "\t\t<Message>${5:MESSAGE}</Message>",
+      "\t\t<Host>${6:IP}</Host>",
+      "\t\t<Port>${7:PORT}</Port>",
+      "\t\t<Protocol>${8|TCP,UDP|}</Protocol>",
+      "\t\t<FormatMessage>${9|true,false|}</FormatMessage>",
+      "\t\t<SSLInfo>",
+      "\t\t\t<Enabled>${10|true,false|}</Enabled>",
+      "\t\t</SSLInfo>",
+      "\t</Syslog>",
+      "\t<logLevel>${11|INFO,ALERT,WARN,ERROR|}</logLevel>",
+      "</MessageLogging>${0}"
+    ],
+    "description": "MessageLogging - Syslog"
+  }
+}

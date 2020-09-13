@@ -80,6 +80,10 @@
       {
         "language": "xml",
         "path": "./snippets/spike_arrest.code-snippets"
+      },
+      {
+        "language": "xml",
+        "path": "./snippets/message_logging.code-snippets"
       }
     ]
   },
