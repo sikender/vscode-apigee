@@ -5,15 +5,9 @@
       "<?xml version=\"1.0\" encoding=\"utf-8\"?>",
       "<AccessEntity name=\"${1:$TM_FILENAME_BASE}\" async=\"false\" continueOnError=\"${2|true,false|}\" enabled=\"${3|true,false|}\">",
       "\t<DisplayName>${4:$TM_FILENAME_BASE}</DisplayName>",
-      "\t<EntityType value=\"${5|apiproduct,app,authorizationcode,company,companydeveloper,consumerkey,consumerkey_scope,developer,requesttoken,verifier|}\" />",
-      "\t<Identifiers>",
-      "\t\t<Identifier>",
-      "\t\t\t<EntityIdentifier ref=\"${6:request.queryparam.apikey}\" type=\"${7|apiproductname,appid,appname,authorizationcode,company,companyname,consumerkey,developeremail,developerid,requesttoken,verifier|}\" />",
-      "\t\t\t<SecondaryIdentifier ref=\"${8:value_variable}\" type=\"${9|apiresource,companyname,consumerkey,developeremail,developerid|}\" />",
-      "\t\t</Identifier>",
-      "\t</Identifiers>",
-      "\t<EntityIdentifier ref=\"${10:request.queryparam.apikey}\" type=\"${11|apiproductname,appid,appname,authorizationcode,company,companyname,consumerkey,developeremail,developerid,requesttoken,verifier|}\" />",
-      "\t<SecondaryIdentifier ref=\"${12:variable}\" type=\"${13|apiresource,companyname,consumerkey,developeremail,developerid|}\" />",
+      "\t<EntityType value=\"${5|apiproduct,app,authorizationcode,consumerkey,consumerkey_scope,developer,requesttoken,verifier|}\" />",
+      "\t<EntityIdentifier ref=\"${6:request.queryparam.apikey}\" type=\"${7|apiproductname,appid,appname,authorizationcode,consumerkey,developeremail,developerid,requesttoken,verifier|}\" />",
+      "\t<SecondaryIdentifier ref=\"${8:variable}\" type=\"${9|apiresource,consumerkey,developeremail,developerid|}\" />",
       "<AccessEntity>${0}"
     ],
     "description": "Access Entity"
@@ -22,8 +16,8 @@
     "prefix": "ae:identifier",
     "body": [
       "<Identifier>",
-      "\t<EntityIdentifier ref=\"${1:request.queryparam.apikey}\" type=\"${2|apiproductname,appid,appname,authorizationcode,company,companyname,consumerkey,developeremail,developerid,requesttoken,verifier|}\" />",
-      "\t<SecondaryIdentifier ref=\"${3:variable}\" type=\"${4|apiresource,companyname,consumerkey,developeremail,developerid|}\" />",
+      "\t<EntityIdentifier ref=\"${1:request.queryparam.apikey}\" type=\"${2|apiproductname,appid,appname,authorizationcode,consumerkey,developeremail,developerid,requesttoken,verifier|}\" />",
+      "\t<SecondaryIdentifier ref=\"${3:variable}\" type=\"${4|apiresource,consumerkey,developeremail,developerid|}\" />",
       "</Identifier>${0}",
     ],
     "description": "Access Entity - Identifier"
