@@ -68,7 +68,7 @@
     ]
   },
   "devDependencies": {
-    "@semantic-release/github": "^7.0.7"
+    "@semantic-release/github": "^8.0.2"
   },
   "release": {
     "branches": "master",
