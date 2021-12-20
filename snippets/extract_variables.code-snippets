@@ -6,9 +6,10 @@
       "<ExtractVariables name=\"${1:$TM_FILENAME_BASE}\" async=\"false\" continueOnError=\"${2|true,false|}\" enabled=\"${3|true,false|}\">",
       "\t<DisplayName>${4:$TM_FILENAME_BASE}</DisplayName>",
       "\t<Source clearPayload=\"${5|true,false|}\">${6:request}</Source>",
+      "\t${0}",
       "\t<VariablePrefix>${7:apigee}</VariablePrefix>",
       "\t<IgnoreUnresolvedVariables>${8|true,false|}</IgnoreUnresolvedVariables>",
-      "</ExtractVariables>${0}"
+      "</ExtractVariables>"
     ],
     "description": "Extract Variables"
   },
