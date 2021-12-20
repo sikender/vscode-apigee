@@ -54,7 +54,12 @@
       "\t</CacheKey>",
       "\t<CacheResource>${8:cache_to_use}</CacheResource>",
       "\t<Scope>${9|Global,Application,Proxy,Target,Exclusive|}</Scope>",
-      "\t<PurgeChildEntries>${11|true,false|}</PurgeChildEntries>",
+      "\t<CacheContext>",
+      "\t\t<APIProxyName ref=\"${10:variable}\">${11:application_that_added_the_entry}</APIProxyName>",
+      "\t\t<ProxyName ref=\"${12:variable}\">${13:proxy_for_which_data_was_cached}</ProxyName>",
+      "\t\t<TargetName ref=\"${14:variable}\">${15:endpoint_for_which_data_was_cached}</TargetName>",
+      "\t</CacheContext>",
+      "\t<PurgeChildEntries>${16|true,false|}</PurgeChildEntries>",
       "</InvalidateCache>${0}"
     ],
     "description": "Cache - Invalidate"
@@ -91,9 +96,9 @@
     "prefix": "ca:cachecontext",
     "body": [
       "<CacheContext>",
-      "\t<APIProxyName>${1:application_that_added_the_entry}</APIProxyName>",
-      "\t<ProxyName>${2:proxy_for_which_data_was_cached}</ProxyName>",
-      "\t<TargetName>${3:endpoint_for_which_data_was_cached}</TargetName>",
+      "\t<APIProxyName ref=\"${1:variable}\">${2:application_that_added_the_entry}</APIProxyName>",
+      "\t<ProxyName ref=\"${3:variable}\">${4:proxy_for_which_data_was_cached}</ProxyName>",
+      "\t<TargetName ref=\"${5:variable}\">${6:endpoint_for_which_data_was_cached}</TargetName>",
       "</CacheContext>${0}"
     ],
     "description": "Cache - Context"
