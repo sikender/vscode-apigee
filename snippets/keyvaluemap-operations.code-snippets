@@ -5,8 +5,9 @@
       "<?xml version=\"1.0\" encoding=\"utf-8\"?>",
       "<JSONToXML name=\"${1:$TM_FILENAME_BASE}\" mapIdentifier=\"${2:kvm_name}\" async=\"false\" continueOnError=\"${3|true,false|}\" enabled=\"${4|true,false|}\">",
       "\t<DisplayName>${5:$TM_FILENAME_BASE}</DisplayName>",
-      "\t<Scope>${6:environment}</Scope>",
-      "\t<ExpiryTimeInSecs>${7:300}</ExpiryTimeInSecs>",
+      "\t<MapName ref=\"${6:kvm_name}\">${7:kvm_name}</MapName>",
+      "\t<Scope>${8|organization,environment,apiproxy,policy|}</Scope>",
+      "\t<ExpiryTimeInSecs>${9:300}</ExpiryTimeInSecs>",
       "\t${0}",
       "</JSONThreatProtection>"
     ],
@@ -21,7 +22,7 @@
       "\t\t\t<Parameter>${1:key_name_literal}</Parameter>",
       "\t\t\t<Parameter ref=\"${2:variable_name}\" />",
       "\t\t</Key>",
-      "\t<Value>${2:v1}</Value>",
+      "\t<Value>${3:v1}</Value>",
       "</Entry>${0}"
     ],
     "description": "KVM Operations - InitialEntries"
@@ -41,7 +42,7 @@
   "KVMOperations-Get": {
     "prefix": "kvm-get",
     "body": [
-      "<Get assignTo=\"${1:myvar}\" index=\"${2:1}\">",
+      "<Get assignTo=\"${1:private.myvar}\" index=\"${2:1}\">",
       "\t<Key>",
       "\t\t<Parameter>${3:key_variable}</Parameter>",
       "\t</Key>",
