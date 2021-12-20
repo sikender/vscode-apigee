@@ -56,6 +56,8 @@
       "\t<Value>${2:variable_value}</Value>",
       "\t<Ref>${3:source_variable}</Ref>",
       "\t<Template>${4:message_template}</Template>",
+      "\t<PropertySetRef>${5:propertysetref_variable}</PropertySetRef>",
+      "\t<ResourceURL>${6:resourceurl_variable}</ResourceURL>",
       "</AssignVariable>${0}"
     ],
     "description": "Assign Message - Assign Variable"
