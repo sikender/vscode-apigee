@@ -3,7 +3,7 @@
     "prefix": "spike",
     "body": [
       "<?xml version=\"1.0\" encoding=\"utf-8\"?>",
-      "<SpikeArrest name=\"${1:$TM_FILENAME_BASE}\" async=\"false\" continueOnError=\"${2|true,false|}\" enabled=\"${3|true,false|}\">",
+      "<SpikeArrest name=\"${1:$TM_FILENAME_BASE}\" continueOnError=\"${2|true,false|}\" enabled=\"${3|true,false|}\">",
       "\t<DisplayName>${4:$TM_FILENAME_BASE}</DisplayName>",
       "\t<Identifier ref=\"${5:variable}\"/>",
       "\t<MessageWeight ref=\"${6:variable}\"/>",
