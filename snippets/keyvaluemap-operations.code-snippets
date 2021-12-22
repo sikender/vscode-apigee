@@ -3,7 +3,7 @@
     "prefix": "kvm",
     "body": [
       "<?xml version=\"1.0\" encoding=\"utf-8\"?>",
-      "<JSONToXML name=\"${1:$TM_FILENAME_BASE}\" mapIdentifier=\"${2:kvm_name}\" async=\"false\" continueOnError=\"${3|true,false|}\" enabled=\"${4|true,false|}\">",
+      "<JSONToXML name=\"${1:$TM_FILENAME_BASE}\" mapIdentifier=\"${2:kvm_name}\" continueOnError=\"${3|true,false|}\" enabled=\"${4|true,false|}\">",
       "\t<DisplayName>${5:$TM_FILENAME_BASE}</DisplayName>",
       "\t<MapName ref=\"${6:kvm_name}\">${7:kvm_name}</MapName>",
       "\t<Scope>${8|organization,environment,apiproxy,policy|}</Scope>",

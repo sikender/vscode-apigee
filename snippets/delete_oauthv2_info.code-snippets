@@ -3,7 +3,7 @@
     "prefix": "doi-AccessToken",
     "body": [
       "<?xml version=\"1.0\" encoding=\"utf-8\"?>",
-      "<DeleteOAuthV2Info name=\"${1:$TM_FILENAME_BASE}\" async=\"false\" continueOnError=\"${2|true,false|}\" enabled=\"${3|true,false|}\">",
+      "<DeleteOAuthV2Info name=\"${1:$TM_FILENAME_BASE}\" continueOnError=\"${2|true,false|}\" enabled=\"${3|true,false|}\">",
       "\t<DisplayName>${4:$TM_FILENAME_BASE}</DisplayName>",
       "\t<AccessToken ref=\"${5:request.queryparam.access_token}\"></AccessToken>",
       "</DeleteOAuthV2Info>${0}"
@@ -14,7 +14,7 @@
     "prefix": "doi-AuthorizationCode",
     "body": [
       "<?xml version=\"1.0\" encoding=\"utf-8\"?>",
-      "<DeleteOAuthV2Info name=\"${1:$TM_FILENAME_BASE}\" async=\"false\" continueOnError=\"${2|true,false|}\" enabled=\"${3|true,false|}\">",
+      "<DeleteOAuthV2Info name=\"${1:$TM_FILENAME_BASE}\" continueOnError=\"${2|true,false|}\" enabled=\"${3|true,false|}\">",
       "\t<DisplayName>${4:$TM_FILENAME_BASE}</DisplayName>",
       "\t<AuthorizationCode ref=\"${5:request.queryparam.code}\"></AuthorizationCode>",
       "</DeleteOAuthV2Info>${0}"

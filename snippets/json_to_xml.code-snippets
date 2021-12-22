@@ -3,7 +3,7 @@
     "prefix": "j2x",
     "body": [
       "<?xml version=\"1.0\" encoding=\"utf-8\"?>",
-      "<JSONToXML name=\"${1:$TM_FILENAME_BASE}\" async=\"false\" continueOnError=\"${2|true,false|}\" enabled=\"${3|true,false|}\">",
+      "<JSONToXML name=\"${1:$TM_FILENAME_BASE}\" continueOnError=\"${2|true,false|}\" enabled=\"${3|true,false|}\">",
       "\t<DisplayName>${4:$TM_FILENAME_BASE}</DisplayName>",
       "\t<Source>${5|request,response|}</Source>",
       "\t<OutputVariable>${6|request,response|}</OutputVariable>",

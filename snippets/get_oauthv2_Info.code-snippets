@@ -3,7 +3,7 @@
     "prefix": "goi-accesstoken",
     "body": [
       "<?xml version=\"1.0\" encoding=\"utf-8\"?>",
-      "<GetOAuthV2Info name=\"${1:$TM_FILENAME_BASE}\" async=\"false\" continueOnError=\"${2|true,false|}\" enabled=\"${3|true,false|}\">",
+      "<GetOAuthV2Info name=\"${1:$TM_FILENAME_BASE}\" continueOnError=\"${2|true,false|}\" enabled=\"${3|true,false|}\">",
       "\t<DisplayName>${4:$TM_FILENAME_BASE}</DisplayName>",
       "\t<AccessToken ref=\"${5:request.queryparam.access_token}\"></AccessToken>",
       "\t<IgnoreAccessTokenStatus>${6|true,false|}</IgnoreAccessTokenStatus>",
@@ -15,7 +15,7 @@
     "prefix": "goi-authorizationcode",
     "body": [
       "<?xml version=\"1.0\" encoding=\"utf-8\"?>",
-      "<GetOAuthV2Info name=\"${1:$TM_FILENAME_BASE}\" async=\"false\" continueOnError=\"${2|true,false|}\" enabled=\"${3|true,false|}\">",
+      "<GetOAuthV2Info name=\"${1:$TM_FILENAME_BASE}\" continueOnError=\"${2|true,false|}\" enabled=\"${3|true,false|}\">",
       "\t<DisplayName>${4:$TM_FILENAME_BASE}</DisplayName>",
       "\t<AuthorizationCode ref=\"${5:request.queryparam.authorization_code}\"></AuthorizationCode>",
       "</GetOAuthV2Info>${0}"
@@ -26,7 +26,7 @@
     "prefix": "goi-clientid",
     "body": [
       "<?xml version=\"1.0\" encoding=\"utf-8\"?>",
-      "<GetOAuthV2Info name=\"${1:$TM_FILENAME_BASE}\" async=\"false\" continueOnError=\"${2|true,false|}\" enabled=\"${3|true,false|}\">",
+      "<GetOAuthV2Info name=\"${1:$TM_FILENAME_BASE}\" continueOnError=\"${2|true,false|}\" enabled=\"${3|true,false|}\">",
       "\t<DisplayName>${4:$TM_FILENAME_BASE}</DisplayName>",
       "\t<ClientId ref=\"${5:request.queryparam.client_id}\"></ClientId>",
       "</GetOAuthV2Info>${0}"
@@ -37,7 +37,7 @@
     "prefix": "goi-refreshtoken",
     "body": [
       "<?xml version=\"1.0\" encoding=\"utf-8\"?>",
-      "<GetOAuthV2Info name=\"${1:$TM_FILENAME_BASE}\" async=\"false\" continueOnError=\"${2|true,false|}\" enabled=\"${3|true,false|}\">",
+      "<GetOAuthV2Info name=\"${1:$TM_FILENAME_BASE}\" continueOnError=\"${2|true,false|}\" enabled=\"${3|true,false|}\">",
       "\t<DisplayName>${4:$TM_FILENAME_BASE}</DisplayName>",
       "\t<RefreshToken ref=\"${5:request.queryparam.refresh_token}\"></RefreshToken>",
       "</GetOAuthV2Info>${0}"

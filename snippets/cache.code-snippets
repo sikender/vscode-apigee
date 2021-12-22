@@ -3,7 +3,7 @@
     "prefix": "ca:populatecache",
     "body": [
       "<?xml version=\"1.0\" encoding=\"utf-8\"?>",
-      "<PopulateCache name=\"${1:$TM_FILENAME_BASE}\" async=\"false\" continueOnError=\"${2|true,false|}\" enabled=\"${3|true,false|}\">",
+      "<PopulateCache name=\"${1:$TM_FILENAME_BASE}\" continueOnError=\"${2|true,false|}\" enabled=\"${3|true,false|}\">",
       "\t<DisplayName>${4:$TM_FILENAME_BASE}</DisplayName>",
       "\t<CacheKey>",
       "\t\t<Prefix>${5:UserToken}</Prefix>",
@@ -26,7 +26,7 @@
     "prefix": "ca:lookupcache",
     "body": [
       "<?xml version=\"1.0\" encoding=\"utf-8\"?>",
-      "<LookupCache name=\"${1:$TM_FILENAME_BASE}\" async=\"false\" continueOnError=\"${2|true,false|}\" enabled=\"${3|true,false|}\">",
+      "<LookupCache name=\"${1:$TM_FILENAME_BASE}\" continueOnError=\"${2|true,false|}\" enabled=\"${3|true,false|}\">",
       "\t<DisplayName>${4:$TM_FILENAME_BASE}</DisplayName>",
       "\t<CacheKey>",
       "\t\t<Prefix>${5:UserToken}</Prefix>",
@@ -45,7 +45,7 @@
     "prefix": "ca:invalidatecache",
     "body": [
       "<?xml version=\"1.0\" encoding=\"utf-8\"?>",
-      "<InvalidateCache name=\"${1:$TM_FILENAME_BASE}\" async=\"false\" continueOnError=\"${2|true,false|}\" enabled=\"${3|true,false|}\">",
+      "<InvalidateCache name=\"${1:$TM_FILENAME_BASE}\" continueOnError=\"${2|true,false|}\" enabled=\"${3|true,false|}\">",
       "\t<DisplayName>${4:$TM_FILENAME_BASE}</DisplayName>",
       "\t<CacheKey>",
       "\t\t<Prefix>${5:UserToken}</Prefix>",
@@ -68,7 +68,7 @@
     "prefix": "ca:responsecache",
     "body": [
       "<?xml version=\"1.0\" encoding=\"utf-8\"?>",
-      "<ResponseCache name=\"${1:$TM_FILENAME_BASE}\" async=\"false\" continueOnError=\"${2|true,false|}\" enabled=\"${3|true,false|}\">",
+      "<ResponseCache name=\"${1:$TM_FILENAME_BASE}\" continueOnError=\"${2|true,false|}\" enabled=\"${3|true,false|}\">",
       "\t<DisplayName>${4:$TM_FILENAME_BASE}</DisplayName>",
       "\t<CacheKey>",
       "\t\t<Prefix>${5:UserToken}</Prefix>",

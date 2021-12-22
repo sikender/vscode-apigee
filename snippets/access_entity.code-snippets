@@ -3,7 +3,7 @@
     "prefix": "ae",
     "body": [
       "<?xml version=\"1.0\" encoding=\"utf-8\"?>",
-      "<AccessEntity name=\"${1:$TM_FILENAME_BASE}\" async=\"false\" continueOnError=\"${2|true,false|}\" enabled=\"${3|true,false|}\">",
+      "<AccessEntity name=\"${1:$TM_FILENAME_BASE}\" continueOnError=\"${2|true,false|}\" enabled=\"${3|true,false|}\">",
       "\t<DisplayName>${4:$TM_FILENAME_BASE}</DisplayName>",
       "\t<EntityType value=\"${5|apiproduct,app,authorizationcode,consumerkey,consumerkey_scope,developer,requesttoken,verifier|}\" />",
       "\t<EntityIdentifier ref=\"${6:request.queryparam.apikey}\" type=\"${7|apiproductname,appid,appname,authorizationcode,consumerkey,developeremail,developerid,requesttoken,verifier|}\" />",

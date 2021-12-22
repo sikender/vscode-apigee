@@ -3,7 +3,7 @@
     "prefix": "ev",
     "body": [
       "<?xml version=\"1.0\" encoding=\"utf-8\"?>",
-      "<ExtractVariables name=\"${1:$TM_FILENAME_BASE}\" async=\"false\" continueOnError=\"${2|true,false|}\" enabled=\"${3|true,false|}\">",
+      "<ExtractVariables name=\"${1:$TM_FILENAME_BASE}\" continueOnError=\"${2|true,false|}\" enabled=\"${3|true,false|}\">",
       "\t<DisplayName>${4:$TM_FILENAME_BASE}</DisplayName>",
       "\t<Source clearPayload=\"${5|true,false|}\">${6:request}</Source>",
       "\t${0}",
