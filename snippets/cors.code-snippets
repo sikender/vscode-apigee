@@ -1,0 +1,20 @@
+{
+  "CORS": {
+    "prefix": "cors",
+    "body": [
+      "<?xml version=\"1.0\" encoding=\"utf-8\"?>",
+      "<CORS name=\"${1:$TM_FILENAME_BASE}\" continueOnError=\"${2|true,false|}\" enabled=\"${3|true,false|}\">",
+      "\t<DisplayName>${4:$TM_FILENAME_BASE}</DisplayName>",
+      "\t<AllowCredentials>${5|true,false|}</AllowCredentials>",
+      "\t<AllowHeaders>${6:Origin, Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers}</AllowHeaders>",
+      "\t<AllowMethods>${7:GET, PUT, POST, DELETE}</AllowMethods>",
+      "\t<AllowOrigins>${8:{request.header.origin}}</AllowOrigins>",
+      "\t<ExposeHeaders>${9:*}</ExposeHeaders>",
+      "\t<GeneratePreflightResponse>${10|true,false|}</GeneratePreflightResponse>",
+      "\t<MaxAge>${11:1800}</MaxAge>",
+      "\t<IgnoreUnresolvedVariables>${12|true,false|}</IgnoreUnresolvedVariables>",
+      "</CORS>${0}"
+    ],
+    "description": "CORS"
+  }
+}

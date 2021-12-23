@@ -92,6 +92,10 @@
       {
         "language": "xml",
         "path": "./snippets/assert_condition.code-snippets"
+      },
+      {
+        "language": "xml",
+        "path": "./snippets/cors.code-snippets"
       }
     ]
   },
