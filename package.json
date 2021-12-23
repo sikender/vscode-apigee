@@ -88,6 +88,10 @@
       {
         "language": "xml",
         "path": "./snippets/raise_fault.code-snippets"
+      },
+      {
+        "language": "xml",
+        "path": "./snippets/assert_condition.code-snippets"
       }
     ]
   },

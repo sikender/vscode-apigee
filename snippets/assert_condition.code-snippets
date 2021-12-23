@@ -1,0 +1,15 @@
+{
+  "AssertCondition": {
+    "prefix": "ac",
+    "body": [
+      "<?xml version=\"1.0\" encoding=\"utf-8\"?>",
+      "<AssertCondition name=\"${1:$TM_FILENAME_BASE}\" continueOnError=\"${2|true,false|}\" enabled=\"${3|true,false|}\">",
+      "\t<DisplayName>${4:$TM_FILENAME_BASE}</DisplayName>",
+      "\t<Condition>",
+      "\t\t${0}",
+      "\t</Condition>",
+      "</AssertCondition>"
+    ],
+    "description": "AssertCondition"
+  }
+}
