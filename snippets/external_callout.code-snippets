@@ -1,0 +1,23 @@
+{
+  "ExternalCallout": {
+    "prefix": "ec",
+    "body": [
+      "<?xml version=\"1.0\" encoding=\"utf-8\"?>",
+      "<ExternalCallout name=\"${1:$TM_FILENAME_BASE}\" continueOnError=\"${2|true,false|}\" enabled=\"${3|true,false|}\">",
+      "\t<DisplayName>${4:$TM_FILENAME_BASE}</DisplayName>",
+      "\t<TimeoutMs>${5:5000}</TimeoutMs>",
+      "\t<GrpcConnection>",
+      "\t\t<Server name=\"${6:target_server}\"/>",
+      "\t</GrpcConnection>",
+      "\t<Configurations>",
+      "\t\t<Property name=\"with.request.content\">${7|true,false|}</Property>",
+      "\t\t<Property name=\"with.request.headers\">${8|true,false|}</Property>",
+      "\t\t<Property name=\"with.response.content\">${9|true,false|}</Property>",
+      "\t\t<Property name=\"with.response.headers\">${10|true,false|}</Property>",
+      "\t\t<FlowVariable>${11:flow_variable}</FlowVariable>",
+      "\t</Configurations>",
+      "</ExternalCallout>${0}"
+    ],
+    "description": "External Callout"
+  }
+}
