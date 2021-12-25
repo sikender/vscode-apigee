@@ -1,0 +1,18 @@
+{
+  "GraphQL": {
+    "prefix": "gql",
+    "body": [
+      "<?xml version=\"1.0\" encoding=\"utf-8\"?>",
+      "<GraphQL name=\"${1:$TM_FILENAME_BASE}\" continueOnError=\"${2|true,false|}\" enabled=\"${3|true,false|}\">",
+      "\t<DisplayName>${4:$TM_FILENAME_BASE}</DisplayName>",
+      "\t<Source>request</Source>",
+      "\t<OperationType>${5|query,mutation,query_mutation|}</OperationType>",
+      "\t<Action>${6|parse,verify,parse_verify|}</Action>",
+      "\t<MaxDepth>${7:10}</MaxDepth>",
+      "\t<MaxCount>${8:4}</MaxCount>",
+      "\t<ResourceURL>${9:schema.graphql}</ResourceURL>",
+      "</GraphQL>${0}"
+    ],
+    "description": "GraphQL"
+  }
+}

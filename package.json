@@ -100,6 +100,10 @@
       {
         "language": "xml",
         "path": "./snippets/external_callout.code-snippets"
+      },
+      {
+        "language": "xml",
+        "path": "./snippets/graphql.code-snippets"
       }
     ]
   },
