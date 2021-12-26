@@ -104,6 +104,10 @@
       {
         "language": "xml",
         "path": "./snippets/graphql.code-snippets"
+      },
+      {
+        "language": "xml",
+        "path": "./snippets/hmac.code-snippets"
       }
     ]
   },

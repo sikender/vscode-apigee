@@ -1,0 +1,33 @@
+{
+  "HMAC-Generate": {
+    "prefix": "hmac:generate",
+    "body": [
+      "<?xml version=\"1.0\" encoding=\"utf-8\"?>",
+      "<HMAC name=\"${1:$TM_FILENAME_BASE}\" continueOnError=\"${2|true,false|}\" enabled=\"${3|true,false|}\">",
+      "\t<DisplayName>${4:$TM_FILENAME_BASE}</DisplayName>",
+      "\t<Algorithm>${5|SHA-1,SHA-224,SHA-256,SHA-384,SHA-512,MD-5|}</Algorithm>",
+      "\t<SecretKey encoding=\"${6|hex,base16,base64,utf8|}\" ref=\"${7:private.encodedsecretkey}\"/>",
+      "\t<Message ref=\"${8:message_variable}\">${9:message_template}</Message>",
+      "\t<Output encoding=\"${10|hex,base16,base64,base64url|}\">${11:output_variable}</Output>",
+      "\t<IgnoreTrueClientIPHeader>${12|true,false|}</IgnoreTrueClientIPHeader>",
+      "</HMAC>${0}"
+    ],
+    "description": "HMAC - Generate"
+  },
+  "HMAC-Verify": {
+    "prefix": "hmac:verify",
+    "body": [
+      "<?xml version=\"1.0\" encoding=\"utf-8\"?>",
+      "<HMAC name=\"${1:$TM_FILENAME_BASE}\" continueOnError=\"${2|true,false|}\" enabled=\"${3|true,false|}\">",
+      "\t<DisplayName>${4:$TM_FILENAME_BASE}</DisplayName>",
+      "\t<Algorithm>${5|SHA-1,SHA-224,SHA-256,SHA-384,SHA-512,MD-5|}</Algorithm>",
+      "\t<SecretKey encoding=\"${6|hex,base16,base64,utf8|}\" ref=\"${7:private.encodedsecretkey}\"/>",
+      "\t<Message ref=\"${8:message_variable}\">${9:message_template}</Message>",
+      "\t<Output encoding=\"${10|hex,base16,base64,base64url|}\">${11:output_variable}</Output>",
+      "\t<VerificationValue encoding=\"${12|hex,base16,base64,base64url|}\" ref=\"${13:value_variable}\"/>",
+      "\t<IgnoreTrueClientIPHeader>${14|true,false|}</IgnoreTrueClientIPHeader>",
+      "</HMAC>${0}"
+    ],
+    "description": "HMAC - Verify"
+  }
+}
